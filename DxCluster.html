@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://user.pa.net/~randrt1/page1_files/DxCluster.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+
+</title><link rel="stylesheet" href="./style_popup.css" type="text/css" media="screen">
+    <script src="./jquery.min.js.download"></script>
+    
+    <link rel="stylesheet" href="./jquery-ui.css">
+    <!-- script src="//code.jquery.com/jquery-1.9.1.js"></script -->
+    <script type="text/javascript" src="./jquery-ui.js.download"></script>
+    <script type="text/javascript" src="./hashtable.js.download"></script>
+    <script type="text/javascript" src="./jquery.numberformatter-1.2.4.min.js.download"></script>
+    <!-- script type='text/javascript' src='https://www.google.com/jsapi'></!-->
+    <script type="text/javascript" src="./DxCluster_008.js.download"></script>
+    <script type="text/javascript" src="./websocket_02.js.download"></script>
+    <script type="text/javascript">
+        var imgId = 'ctl00_ContentPlaceHolder1_ImgMap';
+        var imgServer = 'http://robot.hrdlog.net/';
+    </script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://www.hrdlog.net/DxCluster.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="ctl00_ScriptManager1_HiddenField" id="ctl00_ScriptManager1_HiddenField" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTM1MDc2MjM3D2QWAmYPZBYCAgMPZBYCAgMPZBYCAgEPDxYCHghJbWFnZVVybAUxaHR0cDovL3JvYm90LmhyZGxvZy5uZXQvbWFwLmFzcHg/dGltZT02MzY5ODkwNjU2MGRkZLZKZ+ISbWvr/HtF4h7XHcALLbuq">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./WebResource.axd" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var bands=[['2m',144000000,146000000],['6m',50000000,51000000],['10m',28000000,29700000],['12m',24890000,24990000],['15m',21000000,21450000],['17m',18068000,18168000],['20m',14000000,14350000],['30m',10100000,10150000],['40m',7000000,7300000],['60m',5351500,5366500],['80m',3500000,4000000],['160m',1830000,1850000]];
+var magic_code='3716b497-6072-4163-b70b-93faa3c3c674';
+var user_dxcc={"UserDxcc":[]};
+var countries=[['Afghanistan',3],['Agalega & St. Brandon Is.',4],['Aland Island',5],['Alaska',6],['Albania',7],['Algeria',400],['American Samoa',9],['Amsterdam & St. Paul Is.',10],['Andaman & Nicobar Is.',11],['Andorra',203],['Angola',401],['Anguilla',12],['Annobon Is.',195],['Antarctica',13],['Antigua & Barbuda',94],['Argentina',100],['Armenia',14],['Aruba',91],['Ascension Is.',205],['Asiatic Russia',15],['Austral Is.',508],['Australia',150],['Austria',206],['Aves Is.',17],['Azerbaijan',18],['Azores',149],['Bahamas',60],['Bahrain',304],['Baker & Howland Is.',20],['Balearic Is.',21],['Banaba I. (Ocean I.)',490],['Bangladesh',305],['Barbados',62],['Belarus',27],['Belgium',209],['Belize',66],['Benin',416],['Bermuda',64],['Bhutan',306],['Bolivia',104],['Bonaire Is.',520],['Bosnia-Herzegovina',501],['Botswana',402],['Bouvet',24],['Brazil',108],['British Virgin Is.',65],['Brunei',345],['Bulgaria',212],['Burkina Faso',480],['Burundi',404],['Cambodia',312],['Cameroon',406],['Canada',1],['Canary Is.',29],['Cape Verde',409],['Cayman Islands',69],['Central African Republic',408],['Central Kiribati',31],['Ceuta & Melilla',32],['Chad',410],['Chagos Is.',33],['Chatham Is.',34],['Chesterfield Is.',512],['Chile',112],['China',318],['Christmas Is.',35],['Clipperton Is.',36],['Cocos Is.',37],['Cocos-Keeling Is.',38],['Colombia',116],['Comoros',411],['Conway Reef',489],['Corsica',214],['Costa Rica',308],['Cote d\'Ivoire',428],['Crete',40],['Croatia',497],['Crozet Is.',41],['Cuba',70],['Curacao Is.',517],['Cyprus',215],['Czech Republic',503],['Dem. Rep. of Congo',414],['Denmark',221],['Desecheo Is.',43],['Djibouti',382],['Dodecanese',45],['Dominica',95],['Dominican Rep.',72],['DPR of Korea (North Korea)',344],['Ducie Is.',513],['East Malaysia',46],['Easter Is.',47],['Eastern Kiribati',48],['Ecuador',120],['Egypt',478],['El Salvador',74],['England',223],['Equatorial Guinea',49],['Eritrea',51],['Estonia',52],['Ethiopia',53],['European Russia',54],['Falkland Is.',141],['Faroe Is.',222],['Fed. Republic of Germany',230],['Fernando de Noronha',56],['Fiji',176],['Finland',224],['France',227],['Franz Josef Land',61],['French Guiana',63],['French Polynesia',175],['Gabon',420],['Galapagos Is.',71],['Georgia',75],['Ghana',424],['Gibraltar',233],['Glorioso Is.',99],['Greece',236],['Greenland',237],['Grenada',77],['Guadeloupe',79],['Guam',103],['Guantanamo Bay',105],['Guatemala',76],['Guernsey',106],['Guinea',107],['Guinea-Bissau',109],['Guyana',129],['Haiti',78],['Hawaii',110],['Heard Is.',111],['Honduras',80],['Hong Kong',321],['Hungary',239],['Iceland',242],['India',324],['Indonesia',327],['Iran',330],['Iraq',333],['Ireland',245],['Isle of Man',114],['Israel',336],['Italy',248],['ITU HQ',117],['Jamaica',82],['Jan Mayen',118],['Japan',339],['Jersey',122],['Johnston Is.',123],['Jordan',342],['Juan de Nova, Europa',124],['Juan Fernandez Is.',125],['Kaliningrad',126],['Kazakhstan',130],['Kenya',430],['Kerguelen Is.',131],['Kermadec Is.',133],['Kure Is.',138],['Kuwait',348],['Kyrgyzstan',135],['Lakshadweep Is.',142],['Laos',143],['Latvia',145],['Lebanon',354],['Lesotho',432],['Liberia',434],['Libya',436],['Liechtenstein',251],['Lithuania',146],['Lord Howe Is.',147],['Luxembourg',254],['Macao',152],['Macedonia',502],['Macquarie Is.',153],['Madagascar',438],['Madeira Is.',256],['Malawi',440],['Maldives',159],['Mali',442],['Malpelo Is.',161],['Malta',257],['Mariana Is.',166],['Market Reef',167],['Marquesas Is.',509],['Marshall Is.',168],['Martinique',84],['Mauritania',444],['Mauritius',165],['Mayotte',169],['Mellish Reef',171],['Mexico',50],['Micronesia',173],['Midway Is.',174],['Minami Torishima',177],['Moldova',179],['Monaco',260],['Mongolia',363],['Montenegro',514],['Montserrat',96],['Morocco',446],['Mount Athos',180],['Mozambique',181],['Myanmar',309],['Namibia',464],['Nauru',157],['Navassa Is.',182],['Nepal',369],['Netherlands',263],['New Caledonia',162],['New Zealand',170],['New Zealand Subantarctic Is',16],['Nicaragua',86],['Niger',187],['Nigeria',450],['Niue',188],['Norfolk Is.',189],['North Cook Is.',191],['Northern Ireland',265],['Norway',266],['Ogasawara',192],['Oman',370],['Pakistan',372],['Palau',22],['Palestine',510],['Palmyra & Jarvis Is.',197],['Panama',88],['Papua New Guinea',163],['Paraguay',132],['Peru',136],['Peter I Is.',199],['Philippines',375],['Pitcairn Is.',172],['Poland',269],['Portugal',272],['Pratas Is.',505],['Prince Edward & Marion Is.',201],['Puerto Rico',202],['Qatar',376],['Republic of Korea (S. Korea)',137],['Republic of Kosovo',522],['Republic of South Africa',462],['Republic of South Sudan',521],['Republic of the Congo',412],['Reunion Is.',453],['Revillagigedo',204],['Rodrigues Is.',207],['Romania',275],['Rotuma Is.',460],['Rwanda',454],['Saba & Saint Eustatius Is.',519],['Sable Is.',211],['Saint Barthelemy',516],['Saint Helena',250],['Saint Kitts & Nevis',249],['Saint Lucia',97],['Saint Martin',213],['Saint Paul Is.',252],['Saint Peter & St. Paul Rocks',253],['Saint Pierre & Miquelon',277],['Saint Vincent',98],['Samoa',190],['San Andres & Providencia',216],['San Felix & San Ambrosio',217],['San Marino',278],['Sao Tome & Principe',219],['Sardinia',225],['Saudi Arabia',378],['Scarborough Reef',506],['Scotland',279],['Senegal',456],['Serbia',296],['Seychelles',379],['Sierra Leone',458],['Singapore',381],['Sint Maarten',518],['Slovak Republic',504],['Slovenia',499],['Solomon Is.',185],['Somalia',232],['South Cook Is.',234],['South Georgia Is.',235],['South Orkney Is.',238],['South Sandwich Is.',240],['South Shetland Is.',241],['Sov. Mil. Order of Malta',246],['Spain',281],['Spratly Is.',247],['Sri Lanka',315],['Sudan',466],['Suriname',140],['Svalbard',259],['Swains Is.',515],['Swaziland',468],['Sweden',284],['Switzerland',287],['Syria',384],['Taiwan',386],['Tajikistan',262],['Tanzania',470],['Temotu Province',507],['Thailand',387],['The Gambia',422],['Timor-Leste',511],['Togo',483],['Tokelau Is.',270],['Tonga',160],['Trindade & Martin Vaz Is.',273],['Trinidad & Tobago',90],['Tristan da Cunha & Gough Is.',274],['Tromelin Is.',276],['Tunisia',474],['Turkey',390],['Turkmenistan',280],['Turks & Caicos Is.',89],['Tuvalu',282],['Uganda',286],['UK Sov. Base Areas on Cyprus',283],['Ukraine',288],['United Arab Emirates',391],['United Nations HQ',289],['United States',291],['Uruguay',144],['US Virgin Is.',285],['Uzbekistan',292],['Vanuatu',158],['Vatican',295],['Venezuela',148],['Vietnam',293],['Wake Is.',297],['Wales',294],['Wallis & Futuna Is.',298],['West Malaysia',299],['Western Kiribati',301],['Western Sahara',302],['Willis Is.',303],['Yemen',492],['Zambia',482],['Zimbabwe',452]];
+user_locator='EM19FA';
+user_call='';
+full_screen='0';
+// UrlReferrer='http://user.pa.net/~randrt1/page1new.html';
+//]]>
+</script>
+
+<script src="./jqAjaxPopup.js.download" type="text/javascript"></script>
+<script src="./jquery.hoverIntent.minified.js.download" type="text/javascript"></script>
+<script src="./ScriptResource.axd" type="text/javascript"></script>
+<script src="./ScriptResource(1).axd" type="text/javascript"></script>
+<script src="./webkit.js.download" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="308B90A6">
+</div>
+    <div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+        
+    <div id="dialog" title="HRDLOG.net - DX Cluster" style="display: none;">
+        Callsign <input id="callsign" type="text" size="5">
+        Band <select id="band"></select>
+        Highlight <input id="highlight" type="text">
+        <a href="javascript:void(0);"><img id="img_clear" src="./clearFilter.png"></a>
+        <input id="cbpartial" type="checkbox"> Filtered
+        <span id="span_count"></span>
+        <br>
+        <div align="right"><img id="img_status" src="./transp.png" height="16px" width="16px"></div>
+        <div id="table_div"></div>
+    </div>
+    <br>
+    <br><br>
+    <img id="ctl00_ContentPlaceHolder1_ImgMap" src="./map.aspx" style="height:400px;width:540px;border-width:0px;">
+    <br><br>
+    <br><br>
+    <div id="ctl00_ContentPlaceHolder1_PnCode" class="option3">
+	
+        <b>Copy this HTML code to display the page inside your web site</b><br>
+        <textarea cols="60" rows="3">&lt;iframe src="http://www.hrdlog.net/DxCluster.aspx" height="520" width="820"&gt;&lt;/iframe&gt;
+        </textarea>
+    
+</div>
+    <br>
+    <div id="cat-control" class="option3">
+        <b>HRDLOG.net CAT Control</b>
+        <br>
+        <a href="http://www.hrdlog.net/Resources.aspx#cat-programs">Supported CAT programs</a>
+    </div>
+
+        
+
+
+    </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+    
+    <div id="dxcc_details" style="display: none; position:absolute; z-index: 20000">
+        <table width="" border="0" cellspacing="0" cellpadding="0" align="center" class="personPopupPopup">
+            <tbody><tr>
+                <td class="corner topLeft"></td>
+                <td class="top"></td>
+                <td class="corner topRight"></td>
+            </tr>
+            <tr>
+                <td class="left">&nbsp;</td>
+                <td>
+                    <div class="personPopupResult">
+                        <div id="dxcc_title" style="background-color: #ffd800; text-align: center">Title</div>
+                        <div id="dxcc_header" style="background-color: #ffffe7; text-align: center">Header</div>
+                        <div id="detailPopupContent" style="background-color: #ffffff;" "=""></div>
+                    </div>
+                </td>
+                <td class="right">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="corner bottomLeft">&nbsp;</td>
+                <td class="bottom">&nbsp;</td>
+                <td class="corner bottomRight"></td>
+            </tr>
+        </tbody></table>
+    </div>
+
+
+
+<div id="personPopupContainer"><table width="" border="0" cellspacing="0" cellpadding="0" align="center" class="personPopupPopup"><tbody><tr>   <td class="corner topLeft"></td>   <td class="top"></td>   <td class="corner topRight"></td></tr><tr>   <td class="left">&nbsp;</td>   <td><div id="personPopupContent"></div></td>   <td class="right">&nbsp;</td></tr><tr>   <td class="corner bottomLeft">&nbsp;</td>   <td class="bottom">&nbsp;</td>   <td class="corner bottomRight"></td></tr></tbody></table></div><div id="personPopupContainer"><table width="" border="0" cellspacing="0" cellpadding="0" align="center" class="personPopupPopup"><tbody><tr>   <td class="corner topLeft"></td>   <td class="top"></td>   <td class="corner topRight"></td></tr><tr>   <td class="left">&nbsp;</td>   <td><div id="personPopupContent"></div></td>   <td class="right">&nbsp;</td></tr><tr>   <td class="corner bottomLeft">&nbsp;</td>   <td class="bottom">&nbsp;</td>   <td class="corner bottomRight"></td></tr></tbody></table></div></body></html>

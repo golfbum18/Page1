@@ -1,0 +1,84 @@
+﻿(function (windows) {
+
+    $('.setFreqTrigger').live('click', function () {
+        sendFreqToCat($(this).attr('rel'));
+    });
+
+    function newSocket() {
+        var connection = null;
+        var url = "ws://127.0.0.1:8181/";
+
+        if ("WebSocket" in window) {
+            connection = new WebSocket(url);
+        }
+        else if ("MozWebSocket" in window) {
+            connection = new MozWebSocket(url);
+        }
+        else
+            log("WebSocket not supported");
+
+        return connection;
+
+    }
+
+    var connection = null;
+
+    function checkSockState() {
+        if ((connection) && (connection.readyState == connection.OPEN))
+            return;
+
+        connection = null;
+        connection = newSocket();
+
+        if (connection) {
+            connection.onopen = function () {
+                $('.setFreqTrigger').css({ "textDecoration": "underline" });
+                log('onopen');
+            }
+            connection.onerror = function (err) {
+                log('onerror');
+            }
+            connection.onmessage = function (msg) {
+                log('onmessage ' + msg.data);
+            }
+            connection.onclose = function () {
+                $('.setFreqTrigger').css({ "textDecoration": "none" });
+                setTimeout(function () { checkSockState() }, 3000);
+                log('onclose');
+            }
+        }
+    }
+    
+    function sendFreqToCat(freq) {
+        sendCmd("freq=" + freq + ";");
+    }
+
+    function sendCmd(cmd) {
+        if (connection.readyState == connection.OPEN) {
+            connection.send(cmd);
+            log('sent');
+        } else
+            log("Connection_isn't_open")
+    }
+
+    function log(txt) {
+        //alert(txt);
+    }
+
+    checkSockState();
+
+    window.HrdSocket = {
+        setFreqTrigger: function () {
+            var so = ((connection) && (connection.readyState == connection.OPEN));
+            var td = so ? "underline" : "none";
+            $('.setFreqTrigger').css({ "textDecoration": td });
+            var cc = $('#cat-control');
+            if ((cc.length != 0) && so)
+                cc.hide();
+        },
+        isOpen: function () {
+            return ((connection) && (connection.readyState == connection.OPEN));
+        }
+    }
+
+})(this);
